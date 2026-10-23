@@ -10,8 +10,9 @@ geográficas.
 
 ### Tecnologías y versiones clave
 
--   **Python:** 3.12 o superior, salvo que el entorno del equipo exija
-    otra versión compatible.
+-   **Python:** 3.13 o superior (entorno de desarrollo actual:
+    3.13.17), salvo que el entorno del equipo exija otra versión
+    compatible.
 -   **FastAPI:** API HTTP y documentación OpenAPI.
 -   **Pydantic v2:** validación y serialización de esquemas.
 -   **Uvicorn:** servidor ASGI de desarrollo.
@@ -80,12 +81,16 @@ Ejecutar desde la raíz del repositorio (la carpeta que contiene `app/` y
 `requirements.txt`). En Windows PowerShell:
 
 ``` powershell
-py -3.12 -m venv .venv
+py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
 ```
+
+El entorno de desarrollo actual usa **Python 3.13.17** (el launcher `py`
+está disponible y sin otras versiones registradas). Si instalas otra
+versión compatible (>= 3.13), ajusta el número en el comando.
 
 Si el proyecto aún no tiene `requirements.txt`, no inventes sus
 contenidos ni supongas que existe: consulta el estado del repositorio y
